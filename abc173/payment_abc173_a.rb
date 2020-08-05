@@ -12,10 +12,11 @@ expect = ARGV[1].to_i
 
 def payment(number)
   remainder = number % 1000
-  return 0 if remainder === 0
+  return 0 if remainder == 0
+
   1000 - remainder
 end
 
 puts "Change: #{change = payment(n)}"
 puts "Expect: #{expect}"
-puts "Test: #{change === expect}"
+puts "Test: #{change == expect}"
